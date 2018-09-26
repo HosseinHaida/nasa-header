@@ -1,0 +1,440 @@
+@mixin button-no-style {
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+}
+@mixin media-size-and-font-for-links($size, $font) {
+  @media only screen and (max-width: $size + px) {
+    // Navbar links
+    ul.navTabs > li > a {
+      font-size: $font + px;
+    }
+  }
+}
+// Hamburger menu
+button.navbar-toggle {
+  @include button-no-style();
+  cursor: pointer;
+  right: -25px;
+  margin-right: 24px;
+  margin-top: -85px;
+  padding: 30px 0 27px 0;
+}
+button.navbar-toggle[aria-expanded="true"]{
+  background-color: #0B3D91;
+}
+button.navbar-toggle[aria-expanded="false"]{
+  background-color: none;
+}
+// Hamburger menu icon
+.navbar-toggle > span.glyphicon-menu-hamburger {
+  color: whitesmoke;
+  width: 45px;
+  font-size: 25px;
+}
+// The whole Navbar
+nav {
+  background-color: black;
+  border-radius: 0;
+  // border-radius: none;
+  height: 85px;
+}
+// Navbar logo
+nav > .navbar-header > img {
+  height: 62px;
+  margin: 11px -25px 10px 13px;
+}
+// Navbar items all
+nav > .navbar-collapse {
+  float: right;
+}
+/// Navbar links
+ul.navTabs > li {
+  padding: 17px 0 17px 0;
+}
+ul.navTabs > li > a  {
+  color: white;
+  display: block;
+  cursor: pointer;
+  font-size: 18px;
+}
+// Don't show chevron down icon near sublinks on large screens
+.glyphicon.glyphicon-chevron-down {
+  display: none;
+}
+// NASA TV link for small screens
+div.nasa-tv > a {
+  position: absolute;
+  top: 0;
+  right: 270px;
+  padding: 29.5px 10px 24.5px 10px;
+  text-decoration: none;
+  height: 100%;
+  color: white;
+  display: none;
+  cursor: pointer;
+  font-size: 18px
+}
+ul.navTabs > li:hover,
+.navTabs > li > a:hover,
+div.nasa-tv:hover,
+div.nasa-tv > a:hover {
+  background-color: #0B3D91;
+}
+/// Creating vertical lines between navbar links
+ul.navTabs > li:before {
+  content: "";
+  width: 2px;
+  float: left;
+  background-color: rgba(223, 223, 223, 0.4);
+  padding-top: 50px;
+}
+ul.navTabs > li:nth-child(1)::before {
+  opacity: 0
+}
+ul.navTabs > li:hover:before,
+ul.navTabs > li:hover + li:before {
+  opacity: 0;
+}
+/// End of vertical lines
+/// Navbar Sublinks unordered list
+ul.navTabs > li > ul {
+  display: none;
+  position: absolute;
+  background-color:  #0B3D91;
+  top: 100%;
+  padding: 0 0 0 0;
+  font: 17px Helvetica, Arial, sans-serif;
+  min-width: 100%!important;
+}
+// Showing sublinks when hovering on main navbar links for large screens
+ul.navTabs > li:hover > ul {
+  display: block;
+  padding-top: 10px
+}
+ul.navTabs > li > ul > li {
+  width: max-content;
+  list-style: none;
+  line-height: 32px;
+  min-width: 100%;
+  padding: 5px 10px 5px 10px;
+}
+ul.navTabs > li > ul > li:hover {
+  cursor: pointer;
+  background-color: rgba(10, 45, 105, 0.877)
+}
+ul.navTabs > li > ul > li > a,
+ul.navTabs > li > ul > li > a:hover {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  color: whitesmoke
+}
+ul.navTabs > li > ul > li:first-child {
+  margin-top: -10px;
+}
+/// End of navbar sublinks unordered list
+/// End of Navbar links
+/// Social media icons list
+.fa {
+  font-size: 12px;
+  margin: 3px 2px;
+}
+.facebook {
+  background: #3B5998;
+}
+.twitter {
+  background: #55ACEE;
+}
+.tumblr {
+  background: #2c4762;
+}
+.pinterest {
+  background: #cb2027;
+}
+.yahoo {
+  background: #430297;
+}
+ul.social-media-button {
+  position: relative;
+  top: 29px;
+  right: 38px;
+  @include button-no-style();
+}
+// The share icon
+ul.social-media-button > li > a > span.fa-share-alt {
+  color: whitesmoke;
+  font-size: 22px
+}
+// Remove the stupid dot next to the social media button
+ul.social-media-button > li,
+ul.social-media-button > li > ul > li {
+  list-style: none;
+}
+ul.social-media-button > li > ul {
+  background-color: rgb(221, 221, 221);
+  display: none;
+  position: absolute;
+  padding: 0 0 0 0;
+  min-width: 100%!important;
+  top: 55px;
+  right: -19px
+}
+ul.social-media-button > li.toggle-open > ul {
+  display: block;
+}
+ul.social-media-button > li > ul > li {
+  width: max-content;
+  min-width: 100%;
+  padding: 5px 25px 5px 25px;
+}
+ul.social-media-button > li > ul > li:hover {
+  cursor: pointer;
+  background-color: white
+}
+ul.social-media-button > li > ul > li:hover > a,
+ul.social-media-button > li > ul > li:hover > span {
+  color: black;
+}
+ul.social-media-button > li > ul > li > a {
+  text-decoration: none;
+  display: inline;
+  // width: 100%;
+  color: whitesmoke;
+  font: 13px Helvetica, Arial, sans-serif;
+}
+ul.social-media-button > li > ul > li > span {
+  display: inline;
+  color: whitesmoke;
+  font-size: 14px;
+}
+/// End of social media icons list
+/// Navbar search form
+nav > .search-form {
+  padding-top: 12px;
+}
+nav > .search-form > .input-group > input,
+nav > .search-form > .input-group > input.btn {
+  border-radius: 0;
+  background-color: rgba(66, 66, 66, 0.95);
+  height: 40px;
+  padding: 7px;
+  border: none;
+  margin-left: 0;
+  color: whitesmoke;
+  outline: none;
+  box-shadow: none;
+  top: 3px;
+}
+nav > .search-form > .input-group > input#search-box {
+  width: 150px
+}
+nav > .search-form > .input-group > input {
+  padding-right: 43px;
+}
+nav > .search-form > .input-group > input.btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  z-index: 10;
+  opacity: 0.5;
+  background: url(../../img/search_icon.png) no-repeat scroll;
+  background-size: 27px 27px;
+  margin-top: 9px;
+}
+// Searchbox autocomplete styling on chrome
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none!important;
+  -webkit-text-fill-color: yellow!important;
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+  transition: background-color 5000s ease 0s!important;
+}
+/// End of search form
+hr {
+  margin: 0;
+}
+
+@include media-size-and-font-for-links(1270, 17);
+@include media-size-and-font-for-links(1179, 16);
+@include media-size-and-font-for-links(1145, 15);
+@include media-size-and-font-for-links(1110, 14);
+@include media-size-and-font-for-links(1080, 13.5);
+@include media-size-and-font-for-links(1065, 13);
+@include media-size-and-font-for-links(1026, 12.5);
+@include media-size-and-font-for-links(1020, 12);
+@include media-size-and-font-for-links(1000, 18);
+
+@media only  screen and (max-width: 511px) {
+  /// Search box and it's button
+  nav > .search-form {
+    right: -5px!important
+  }
+  nav > .search-form > .input-group > input.btn {
+    float: right!important;
+    margin-right: -7px;
+  }
+  // Don't show the search box on small screens
+  nav > .search-form > .input-group > input#search-box {
+    z-index: -1;
+    right: -4px;
+    width: 0;
+    -webkit-transition: width 0.4s ease-out 0; /* For Safari 3.1 to 6.0 */
+    transition: width 0.4s;
+  }
+  // Toggle the searchbox with it's icon
+  nav > .search-form > .input-group > input.btn.toggle-open + input#search-box {
+    z-index: 1!important;
+    width: 150px;
+    padding-right: 5px;
+  }
+  // If the search form is visible then don't show the NASA TV link
+  form.inputChildIsVisible + div.nasa-tv {
+    display: none;
+  }
+  /// End of search box and it's button
+  div.nasa-tv > a {
+    right: 142px!important;
+  }
+}
+
+@media only  screen and (max-width: 767px) {
+  nav > .navbar-form.search-form {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    margin: 6.5px -20px 0 0;
+  }
+  nav > ul.social-media-button {
+    margin-right: -3px;
+  }
+  ul.navTabs {
+    margin: 0 0 0 -18px;
+    padding-left: 17px;
+  }
+}
+@media only  screen and (max-width: 1000px) {
+  nav > .search-form > .input-group > input {
+    top: 0;
+  }
+  nav > .search-form > .input-group > input.btn {
+    margin-top: 6px;
+  }
+  .navbar-collapse {
+    width: calc(100% + 2px)!important;
+    margin-right: -1px;
+    margin-top: -10px;
+    padding: 0;
+    background-color: #0B3D91;
+    box-shadow: none!important;
+    transition: none;
+  }
+  ul.navTabs > li {
+    // 100 perc width of links on screens of 1000 px wide
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  // Show the separate NASA TV link on small screens
+  div.nasa-tv > a {
+    display: block!important;
+  }
+  // Hide the inline NASA TV link on the navbar links list
+  li.nasa-tv-inline {
+    display: none!important;
+  }
+  // Don't show the vertical lines before the links on
+  // collapsible links list
+  ul.navTabs > li:before {
+    display: none;
+  }
+  ul.navTabs > li > a {
+    padding: 10px;
+    min-width: 100%
+  }
+  ul.navTabs > li > a:hover {
+    background-color: rgba(251, 251, 251, 0.137)!important;
+  }
+  ul.navTabs > li > ul {
+    position: relative;
+    padding-top: 10px!important;
+    background-color: rgba(251, 251, 251, 0.137)!important;
+  }
+  ul.navTabs > li:hover > ul {
+    display: none;
+  }
+  ul.navTabs > li > ul > li {
+    padding-left: 30px;
+  }
+  ul.navTabs > li.toggle-open > ul,
+  ul.social-media-button > li.toggle-open > ul {
+    display: block!important;
+  }
+  .glyphicon.glyphicon-chevron-down {
+    display: block;
+    color: whitesmoke;
+    float: right
+  }
+  nav > ul.social-media-button {
+    position: absolute;
+    // top: 26px!important;
+    margin-top: -1px;
+    right: 57px
+  }
+  ul.social-media-button > li > ul {
+    top: 56px;
+  }
+  // .navbar-toggle > span.glyphicon-menu-hamburger {
+  //   margin-right: -25px;
+  // }
+  nav > .search-form {
+    margin-right: 76px!important
+  }
+  /// Changing the responsive layout breakpoint to under 1000px width
+  .collapse {
+    display: none !important;
+  }
+  .navbar-toggle {
+    display: block!important;
+  }
+  .navbar-header{
+    float: none;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+ }
+ .navbar-collapse.collapse.in {
+    display: block!important;
+ }
+ /// End of the layout breakpoint
+}
+@media only  screen and (min-width: 768px) and (max-width: 1000px) {
+ nav > form.search-form {
+  margin-top: -72px;
+  margin-right: 10px!important
+ }
+ ul.social-media-button {
+  margin-right: -4px;
+ }
+}
+@media only  screen and (min-width: 835px) and (max-width: 1000px) {
+  ul.navTabs {
+    width: 100%!important
+  }
+}
+ @media only  screen and (max-width: 348px) {
+  div.nasa-tv > a {
+    right: 125px!important
+  }
+ }

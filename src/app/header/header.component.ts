@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   screenWidth = window.screen.width;
   constructor(private renderer: Renderer2) {}
 
-  // The search box functionality + some extra css stylesheets for
+  // The search box functionality + some extra css styles for
   // the toggle-open and inputChildIsVisible classes
   onSearchIconClick() {
     if (window.screen.width > 511) {

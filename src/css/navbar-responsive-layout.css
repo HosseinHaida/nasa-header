@@ -1,0 +1,161 @@
+@media only screen and (max-width: 348px) {
+  nav > div.nasa-tv > a {
+    right: 125px!important
+  }
+ }
+@media only screen and (max-width: 511px) {
+   /* Search box and it's button */
+  nav > .search-form {
+    right: -5px!important
+  }
+  nav > .search-form > .input-group > input.btn {
+    float: right!important;
+    margin-right: -7px;
+  }
+   /* Don't show the search box on small screens */
+  nav > .search-form > .input-group > input#search-box {
+    z-index: -1;
+    right: -4px;
+    width: 0;
+    -webkit-transition: width 0.4s ease-out 0; /* For Safari 3.1 to 6.0 */
+    transition: width 0.4s;
+  }
+   /* Toggle the searchbox with it's icon */
+  nav > .search-form > .input-group > input.btn.toggle-open + input#search-box {
+    z-index: 1!important;
+    width: 150px;
+    padding-right: 5px;
+  }
+   /* If the search form is visible then don't show the NASA TV link */
+  form.inputChildIsVisible + div.nasa-tv {
+    display: none;
+  }
+   /* End of search box and it's button */
+  nav > div.nasa-tv > a {
+    right: 142px!important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  nav > .navbar-form.search-form {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    margin: 6.5px -20px 0 0;
+  }
+  nav > ul.social-media-button {
+    margin-right: -3px;
+  }
+  nav > .navbar-collapse > ul.navTabs {
+    margin: 0 0 0 -18px;
+    padding-left: 17px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  nav > form.search-form {
+   margin-top: -72px;
+   margin-right: 10px!important
+  }
+  nav > ul.social-media-button {
+   margin-right: -4px;
+  }
+ }
+ @media only screen and (min-width: 835px) and (max-width: 1000px) {
+  ul.navTabs {
+    width: 100%!important
+  }
+}
+@media only screen and (max-width: 1000px) {
+  nav > .search-form > .input-group > input {
+    top: 0;
+  }
+  nav > .search-form > .input-group > input.btn {
+    margin-top: 6px;
+  }
+  nav > .navbar-collapse {
+    width: calc(100% + 2px)!important;
+    margin-right: -1px;
+    margin-top: -10px;
+    padding: 0;
+    background-color: #0B3D91;
+    box-shadow: none!important;
+    transition: none;
+  }
+  nav > .navbar-collapse > ul.navTabs > li {
+     /* 100 perc width of links on screens of 1000 px wide */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+   /* Show the separate NASA TV link on small screens */
+  nav > div.nasa-tv > a {
+    display: block!important;
+  }
+   /* Hide the inline NASA TV link on the navbar links list */
+   nav >
+    .navbar-collapse >
+      ul.navTabs >
+        li.nasa-tv-inline {
+    display: none!important;
+  }
+   /* Don't show the vertical lines before the links on
+    collapsible links list */
+    nav > .navbar-collapse > ul.navTabs > li:before {
+    display: none;
+  }
+  nav > .navbar-collapse > ul.navTabs > li > a {
+    padding: 10px;
+    min-width: 100%
+  }
+  nav > .navbar-collapse > ul.navTabs > li > a:hover {
+    background-color: rgba(251, 251, 251, 0.137)!important;
+  }
+  nav > .navbar-collapse > ul.navTabs > li > ul {
+    position: relative;
+    padding-top: 10px!important;
+    background-color: rgba(251, 251, 251, 0.137)!important;
+  }
+  nav > .navbar-collapse > ul.navTabs > li:hover > ul {
+    display: none;
+  }
+  nav > .navbar-collapse > ul.navTabs > li > ul > li {
+    padding-left: 30px;
+  }
+  nav > .navbar-collapse > ul.navTabs > li.toggle-open > ul,
+  nav > .navbar-collapse > ul.social-media-button > li.toggle-open > ul {
+    display: block!important;
+  }
+  .glyphicon.glyphicon-chevron-down {
+    display: block;
+    color: whitesmoke;
+    float: right
+  }
+  nav > ul.social-media-button {
+    position: absolute;
+    margin-top: -1px;
+    right: 57px
+  }
+  nav > ul.social-media-button > li > ul {
+    top: 56px;
+  }
+  nav > .search-form {
+    margin-right: 76px!important
+  }
+   /* Overriding the responsive layout breakpoint to under 1000px width */
+  .collapse {
+    display: none !important;
+  }
+  .navbar-toggle {
+    display: block!important;
+  }
+  .navbar-header{
+    float: none;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+ }
+ .navbar-collapse.collapse.in {
+    display: block!important;
+ }
+  /* End of the layout breakpoint */
+}

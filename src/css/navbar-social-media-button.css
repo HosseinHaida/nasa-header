@@ -1,0 +1,72 @@
+ /* Social media icons list */
+.fa {
+  font-size: 12px;
+  margin: 3px 2px;
+}
+.facebook {
+  background: #3B5998;
+}
+.twitter {
+  background: #55ACEE;
+}
+.tumblr {
+  background: #2c4762;
+}
+.pinterest {
+  background: #cb2027;
+}
+.yahoo {
+  background: #430297;
+}
+ul.social-media-button {
+  position: relative;
+  top: 29px;
+  right: 38px;
+}
+ /* The share icon */
+ul.social-media-button > li > a > span.fa-share-alt {
+  color: whitesmoke;
+  font-size: 22px
+}
+ /* Remove the stupid dot next to the social media button */
+ul.social-media-button > li,
+ul.social-media-button > li > ul > li {
+  list-style: none;
+}
+ul.social-media-button > li > ul {
+  background-color: rgb(221, 221, 221);
+  display: none;
+  position: absolute;
+  padding: 0 0 0 0;
+  min-width: 100%!important;
+  top: 55px;
+  right: -19px
+}
+ul.social-media-button > li.toggle-open > ul {
+  display: block;
+}
+ul.social-media-button > li > ul > li {
+  width: max-content;
+  min-width: 100%;
+  padding: 5px 25px 5px 25px;
+}
+ul.social-media-button > li > ul > li:hover {
+  cursor: pointer;
+  background-color: white
+}
+ul.social-media-button > li > ul > li:hover > a,
+ul.social-media-button > li > ul > li:hover > span {
+  color: black;
+}
+ul.social-media-button > li > ul > li > a {
+  text-decoration: none;
+  display: inline;
+  color: whitesmoke;
+  font: 13px Helvetica, Arial, sans-serif;
+}
+ul.social-media-button > li > ul > li > span {
+  display: inline;
+  color: whitesmoke;
+  font-size: 14px;
+}
+ /* End of social media icons list */

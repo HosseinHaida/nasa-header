@@ -1,0 +1,15 @@
+@mixin button-no-style {
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+}
+@mixin media-size-and-font-for-links($size, $font) {
+  @media only screen and (max-width: $size + px) {
+    // Navbar links
+    ul.navTabs > li > a {
+      font-size: $font + px;
+    }
+  }
+}

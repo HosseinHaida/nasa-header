@@ -1,0 +1,51 @@
+ /* Navbar search form */
+nav > .search-form {
+  padding-top: 12px;
+}
+nav > .search-form > .input-group > input,
+nav > .search-form > .input-group > input.btn {
+  border-radius: 0;
+  background-color: rgba(66, 66, 66, 0.95);
+  height: 40px;
+  padding: 7px;
+  border: none;
+  margin-left: 0;
+  color: whitesmoke;
+  outline: none;
+  box-shadow: none;
+  top: 3px;
+}
+nav > .search-form > .input-group > input#search-box {
+  width: 150px
+}
+nav > .search-form > .input-group > input {
+  padding-right: 43px;
+}
+nav > .search-form > .input-group > input.btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  z-index: 10;
+  opacity: 0.5;
+  background: url(../img/search_icon.png) no-repeat scroll;
+  background-size: 27px 27px;
+  margin-top: 9px;
+}
+ /* Searchbox autocomplete styling on chrome */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none!important;
+  -webkit-text-fill-color: yellow!important;
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+  transition: background-color 5000s ease 0s!important;
+}
+ /* End of search form */

@@ -1,5 +1,5 @@
 <nav class="navbar">
-  <div class="navbar-header">
+  <div class="navbar-head">
     <img
     class="navbar-left"
     src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1200px-NASA_logo.svg.png"
@@ -9,8 +9,8 @@
   <button
   type="button"
   class="navbar-toggle"
-  data-toggle="collapse"
-  data-target="#navbar-menu">
+  id="navbar-toggle"
+  (click)="onNavbarBtnClick()">
 <span class="glyphicon glyphicon-menu-hamburger"></span></button>
 
 <ul class="social-media-button navbar-right">
@@ -28,7 +28,7 @@
     </li>
 </ul>
 
-<form #searchForm class="navbar-form navbar-right search-form">
+<form #searchForm class="search-form">
   <div class="input-group">
     <input
       appDropdown
@@ -47,7 +47,7 @@
 
 <div #nasatvRep class="navbar-right nasa-tv"><a routerLink="/nasatv"> NASA TV </a></div>
 
-  <div id="navbar-menu" class="collapse navbar-collapse">
+  <div id="navbar-menu" class="collapse navbar-menu">
       <ul class="nav navbar-nav navTabs">
         <li appDropdown><a> Topics <span class="glyphicon glyphicon-chevron-down"></span></a>
           <ul>

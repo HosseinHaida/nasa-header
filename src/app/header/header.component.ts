@@ -11,6 +11,8 @@ export class HeaderComponent implements OnInit {
   @ViewChild('searchIconBtn') searchIconBtn: ElementRef;
   @ViewChild('searchForm') searchForm: ElementRef;
   screenWidth = window.screen.width;
+  toggleNavbar = false;
+
   constructor(private renderer: Renderer2) {}
 
   // The search box functionality + some extra css styles for
@@ -44,6 +46,24 @@ export class HeaderComponent implements OnInit {
         this.searchForm.nativeElement,
          'inputChildIsVisible');
     }
+  }
+  onNavbarBtnClick() {
+    const navbarMenu = document
+                        .getElementById('navbar-menu');
+    let areaExpanded = document
+                        .getElementById('navbar-toggle')
+                          .getAttribute('aria-expanded');
+    this.toggleNavbar = !this.toggleNavbar;
+    if (this.toggleNavbar) {
+      navbarMenu.classList.add('shown');
+      areaExpanded = 'true';
+    } else {
+      navbarMenu.classList.remove('shown');
+      areaExpanded = 'false';
+    }
+    document
+      .getElementById('navbar-toggle')
+        .setAttribute('aria-expanded', areaExpanded);
   }
 
   ngOnInit() {}

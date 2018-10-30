@@ -1,6 +1,9 @@
  /* Navbar search form */
 nav > .search-form {
   padding-top: 12px;
+  float: right;
+  margin-top: 7px;
+  margin-right: 15px
 }
 nav > .search-form > .input-group > input,
 nav > .search-form > .input-group > input.btn {

@@ -25,8 +25,9 @@ ul.social-media-button {
 }
  /* The share icon */
 ul.social-media-button > li > a > span.fa-share-alt {
+  content: url(../img/share.jpg);
   color: whitesmoke;
-  font-size: 22px
+  width: 22px
 }
  /* Remove the stupid dot next to the social media button */
 ul.social-media-button > li,

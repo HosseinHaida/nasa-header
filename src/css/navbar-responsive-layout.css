@@ -1,3 +1,9 @@
+@media only screen and (min-width: 1000px) {
+  .navbar-menu {
+    margin-right: 12px;
+    display: block;
+  }
+}
 @media only screen and (max-width: 348px) {
   nav > div.nasa-tv > a {
     right: 125px!important
@@ -6,7 +12,7 @@
 @media only screen and (max-width: 511px) {
    /* Search box and it's button */
   nav > .search-form {
-    right: -5px!important
+    right: 20px!important
   }
   nav > .search-form > .input-group > input.btn {
     float: right!important;
@@ -37,27 +43,31 @@
 }
 
 @media only screen and (max-width: 767px) {
-  nav > .navbar-form.search-form {
+  nav > .search-form {
     position: absolute;
     top: 3px;
-    right: 5px;
+    right: 25px;
     margin: 6.5px -20px 0 0;
   }
   nav > ul.social-media-button {
     margin-right: -3px;
   }
-  nav > .navbar-collapse > ul.navTabs {
+  nav > .navbar-menu > ul.navTabs {
     margin: 0 0 0 -18px;
     padding-left: 17px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
   nav > form.search-form {
-   margin-top: -72px;
-   margin-right: 10px!important
+   margin-top: 10px;
+   margin-right: 33px!important
   }
   nav > ul.social-media-button {
    margin-right: -4px;
+   margin-top: -2px!important
+  }
+  button.navbar-toggle {
+    margin-top: -2px;
   }
  }
  @media only screen and (min-width: 835px) and (max-width: 1000px) {
@@ -72,16 +82,16 @@
   nav > .search-form > .input-group > input.btn {
     margin-top: 6px;
   }
-  nav > .navbar-collapse {
+  nav > .navbar-menu {
     width: calc(100% + 2px)!important;
     margin-right: -1px;
-    margin-top: -10px;
+    margin-top: -8px;
     padding: 0;
     background-color: #0B3D91;
     box-shadow: none!important;
     transition: none;
   }
-  nav > .navbar-collapse > ul.navTabs > li {
+  nav > .navbar-menu > ul.navTabs > li {
      /* 100 perc width of links on screens of 1000 px wide */
     width: 100%;
     margin: 0;
@@ -93,36 +103,36 @@
   }
    /* Hide the inline NASA TV link on the navbar links list */
    nav >
-    .navbar-collapse >
+    .navbar-menu >
       ul.navTabs >
         li.nasa-tv-inline {
     display: none!important;
   }
    /* Don't show the vertical lines before the links on
     collapsible links list */
-    nav > .navbar-collapse > ul.navTabs > li:before {
-    display: none;
+  nav > .navbar-menu > ul.navTabs > li:before {
+  display: none;
   }
-  nav > .navbar-collapse > ul.navTabs > li > a {
+  nav > .navbar-menu > ul.navTabs > li > a {
     padding: 10px;
     min-width: 100%
   }
-  nav > .navbar-collapse > ul.navTabs > li > a:hover {
+  nav > .navbar-menu > ul.navTabs > li > a:hover {
     background-color: rgba(251, 251, 251, 0.137)!important;
   }
-  nav > .navbar-collapse > ul.navTabs > li > ul {
+  nav > .navbar-menu > ul.navTabs > li > ul {
     position: relative;
     padding-top: 10px!important;
     background-color: rgba(251, 251, 251, 0.137)!important;
   }
-  nav > .navbar-collapse > ul.navTabs > li:hover > ul {
+  nav > .navbar-menu > ul.navTabs > li:hover > ul {
     display: none;
   }
-  nav > .navbar-collapse > ul.navTabs > li > ul > li {
+  nav > .navbar-menu > ul.navTabs > li > ul > li {
     padding-left: 30px;
   }
-  nav > .navbar-collapse > ul.navTabs > li.toggle-open > ul,
-  nav > .navbar-collapse > ul.social-media-button > li.toggle-open > ul {
+  nav > .navbar-menu > ul.navTabs > li.toggle-open > ul,
+  nav > .navbar-menu > ul.social-media-button > li.toggle-open > ul {
     display: block!important;
   }
   .glyphicon.glyphicon-chevron-down {
@@ -141,21 +151,14 @@
   nav > .search-form {
     margin-right: 76px!important
   }
-   /* Overriding the responsive layout breakpoint to under 1000px width */
-  .collapse {
-    display: none !important;
+  .navbar-menu {
+    display: none;
+  }
+   .shown {
+    display: block!important;
   }
   .navbar-toggle {
     display: block!important;
   }
-  .navbar-header{
-    float: none;
-  }
-  .navbar-collapse.collapse {
-    display: none!important;
- }
- .navbar-collapse.collapse.in {
-    display: block!important;
- }
   /* End of the layout breakpoint */
 }

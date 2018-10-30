@@ -1,19 +1,20 @@
-<nav class="navbar">
-  <div class="navbar-head">
+<nav>
+  <div class="logo-container">
     <img
-    class="navbar-left"
+    style="float: left"
+    class=""
     src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1200px-NASA_logo.svg.png"
-    alt="nasa logo">
+    alt="NASA logo">
   </div>
 
   <button
   type="button"
-  class="navbar-toggle"
+  class="navbar-toggler"
   id="navbar-toggle"
   (click)="onNavbarBtnClick()">
-<span class="glyphicon glyphicon-menu-hamburger"></span></button>
+<span class="fa fa-bars"></span></button>
 
-<ul class="social-media-button navbar-right">
+<ul class="social-media-button">
     <li appDropdown>
       <a role="button">
         <span class="fa fa-share-alt"></span>
@@ -34,22 +35,22 @@
       appDropdown
       (click)="onSearchIconClick()"
       #searchIconBtn
-      class="btn btn-default"
+      class="search-btn"
       type="button">
     <input
       #searchInput
       type="text"
       id="search-box"
-      class="form-control"
+      class="search-text-input"
       placeholder="Search">
   </div>
 </form>
 
-<div #nasatvRep class="navbar-right nasa-tv"><a routerLink="/nasatv"> NASA TV </a></div>
+<div #nasatvRep class="nasa-tv"><a routerLink="/nasatv"> NASA TV </a></div>
 
-  <div id="navbar-menu" class="collapse navbar-menu">
-      <ul class="nav navbar-nav navTabs">
-        <li appDropdown><a> Topics <span class="glyphicon glyphicon-chevron-down"></span></a>
+  <div id="navbar-menu" class="navbar-menu">
+      <ul class="navTabs">
+        <li appDropdown><a> Topics <span class="fa fa-chevron-down"></span></a>
           <ul>
             <li><a href="">Humans in Space</a></li>
             <li><a href="">Moon to Mars</a></li>
@@ -64,7 +65,7 @@
             <li><a href="">All Topics A-Z</a></li>
           </ul>
         </li>
-        <li appDropdown><a> Missions <span class="glyphicon glyphicon-chevron-down"></span></a>
+        <li appDropdown><a> Missions <span class="fa fa-chevron-down"></span></a>
           <ul>
             <li><a href="">International Space Station</a></li>
             <li><a href="">Hubble Space Telescope</a></li>
@@ -80,7 +81,7 @@
             <li><a href="">Launches and Landings</a></li>
             <li><a href="">All Missions A-Z</a></li>
           </ul></li>
-        <li appDropdown><a> Galleries <span class="glyphicon glyphicon-chevron-down"></span></a>
+        <li appDropdown><a> Galleries <span class="fa fa-chevron-down"></span></a>
           <ul>
             <li><a href="">Image of The Day</a></li>
             <li><a href="">Image Galleries</a></li>
@@ -90,7 +91,7 @@
           </ul>
         </li>
         <li class="nasa-tv-inline"><a routerLink="/nasatv"> NASA TV </a></li>
-        <li appDropdown><a> Follow NASA <span class="glyphicon glyphicon-chevron-down"></span></a>
+        <li appDropdown><a> Follow NASA <span class="fa fa-chevron-down"></span></a>
           <ul>
             <li><a href="">Social Media</a></li>
             <li><a href="">NASA Socials</a></li>
@@ -99,14 +100,14 @@
             <li><a href="">Get Involved</a></li>
             <li><a href="">Spot the Station</a></li>
         </ul></li>
-        <li appDropdown><a> Downloads <span class="glyphicon glyphicon-chevron-down"></span></a>
+        <li appDropdown><a> Downloads <span class="fa fa-chevron-down"></span></a>
           <ul>
             <li><a href="">Apps</a></li>
             <li><a href="">Podcasts</a></li>
             <li><a href="">E-Books</a></li>
             <li><a href="">Audio and Ringtones</a></li>
           </ul></li>
-        <li appDropdown><a> About <span class="glyphicon glyphicon-chevron-down"></span></a>
+        <li appDropdown><a> About <span class="fa fa-chevron-down"></span></a>
           <ul>
             <li><a href="">About NASA</a></li>
             <li><a href="">Leadership</a></li>
@@ -117,7 +118,7 @@
             <li><a href="">People of NASA</a></li>
             <li><a href="">Careers@NASA</a></li>
           </ul></li>
-        <li appDropdown><a> NASA Audiences<span class="glyphicon glyphicon-chevron-down"></span></a>
+        <li appDropdown><a> NASA Audiences<span class="fa fa-chevron-down"></span></a>
           <ul>
             <li><a href="">For Media</a></li>
             <li><a href="">For Educators</a></li>

@@ -9,16 +9,17 @@
 nav {
   background-color: black;
   border-radius: 0;
+  padding-top: 1px;
   height: 85px;
 }
 // Navbar logo
-nav > .navbar-head > img {
+nav > .logo-container > img {
   height: 62px;
   margin: 11px -25px 10px 13px;
 }
 
 // Reset the navbar hamburger menu button style
-button.navbar-toggle,
+button.navbar-toggler,
 ul.social-media-button {
   @include button-no-style();
   // other styles is in "../../css/navbar-burger-menu.css"

@@ -4,6 +4,7 @@
   box-shadow: none;
   outline: none;
   border-radius: 0;
+  cursor: pointer;
 }
 @mixin media-size-and-font-for-links($size, $font) {
   @media only screen and (max-width: $size + px) {

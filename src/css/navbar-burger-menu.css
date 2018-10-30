@@ -1,19 +1,16 @@
  /* navbar hamburger menu button */
-button.navbar-toggle {
-  cursor: pointer;
-  right: -25px;
-  margin-right: 24px;
-  margin-top: -85px;
-  padding: 30px 0 27px 0;
+button.navbar-toggler {
+  padding: 29px 0 27px 0;
+  float: right;
 }
-button.navbar-toggle[aria-expanded="true"]{
+button.navbar-toggler[aria-expanded="true"]{
   background-color: #0B3D91;
 }
-button.navbar-toggle[aria-expanded="false"]{
+button.navbar-toggler[aria-expanded="false"]{
   background-color: none;
 }
  /* Hamburger menu button icon */
-.navbar-toggle > span.glyphicon-menu-hamburger {
+.navbar-toggler > span.fa-bars {
   color: whitesmoke;
   width: 45px;
   font-size: 25px;

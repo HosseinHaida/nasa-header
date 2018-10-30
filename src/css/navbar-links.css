@@ -1,29 +1,44 @@
+.navbar-menu {
+  margin-top: -20px;
+  padding: 0;
+}
 /* Navbar links */
+ul.navTabs {
+  float: left;
+  padding: 0;
+}
 ul.navTabs > li {
-  padding: 17px 0 17px 0;
+  float: left;
+  padding: 25px 0 14px 0;
+  list-style: none;
 }
 ul.navTabs > li > a  {
   color: white;
-  display: block;
+  display: inline-block;
   cursor: pointer;
-  font-size: 18px;
+  text-decoration: none;
+  padding: 13px 12px 9px 12px;
+  font: 18px Helvetica, Arial, sans-serif;
 }
  /* Don't show chevron down icon near sublinks on large screens */
-.glyphicon.glyphicon-chevron-down {
+.fa.fa-chevron-down {
   display: none;
 }
  /* NASA TV link for small screens */
+div.nasa-tv {
+  float: right;
+}
 div.nasa-tv > a {
   position: absolute;
   top: 0;
-  right: 270px;
-  padding: 29.5px 10px 24.5px 10px;
+  right: 290px;
+  padding: 34px 10px 30px 10px;
   text-decoration: none;
-  height: 100%;
   color: white;
   display: none;
   cursor: pointer;
-  font-size: 18px
+  font-size: 18px;
+  font-family: Helvetica, Arial, sans-serif;
 }
  /* Blue background on the navbar links hovering */
 ul.navTabs > li:hover,
@@ -53,10 +68,12 @@ ul.navTabs > li > ul {
   display: none;
   position: absolute;
   background-color:  #0B3D91;
-  top: 100%;
+  top: 85px;
   padding: 0 0 0 0;
   font: 17px Helvetica, Arial, sans-serif;
-  min-width: 100%!important;
+}
+ul.navTabs > li:last-child > ul {
+  width: 170px;
 }
  /* Showing sublinks when hovering on main navbar links for large screens */
 ul.navTabs > li:hover > ul {
@@ -64,11 +81,10 @@ ul.navTabs > li:hover > ul {
   padding-top: 10px
 }
 ul.navTabs > li > ul > li {
-  width: max-content;
+  /* min-width: max-content!important; */
   list-style: none;
   line-height: 32px;
-  min-width: 100%;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 10px;
 }
 ul.navTabs > li > ul > li:hover {
   cursor: pointer;

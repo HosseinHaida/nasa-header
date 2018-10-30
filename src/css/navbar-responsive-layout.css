@@ -3,6 +3,9 @@
     margin-right: 12px;
     display: block;
   }
+  .navbar-toggler {
+    display: none;
+  }
 }
 @media only screen and (max-width: 348px) {
   nav > div.nasa-tv > a {
@@ -10,26 +13,20 @@
   }
  }
 @media only screen and (max-width: 511px) {
-   /* Search box and it's button */
-  nav > .search-form {
-    right: 20px!important
-  }
-  nav > .search-form > .input-group > input.btn {
-    float: right!important;
-    margin-right: -7px;
-  }
    /* Don't show the search box on small screens */
   nav > .search-form > .input-group > input#search-box {
     z-index: -1;
     right: -4px;
     width: 0;
+    background-color: transparent;
     -webkit-transition: width 0.4s ease-out 0; /* For Safari 3.1 to 6.0 */
     transition: width 0.4s;
   }
    /* Toggle the searchbox with it's icon */
-  nav > .search-form > .input-group > input.btn.toggle-open + input#search-box {
+  nav > .search-form > .input-group > input.search-btn.toggle-open + input#search-box {
     z-index: 1!important;
-    width: 150px;
+    background-color:rgba(66, 66, 66, 0.95);
+    width: 140px;
     padding-right: 5px;
   }
    /* If the search form is visible then don't show the NASA TV link */
@@ -41,59 +38,29 @@
     right: 142px!important;
   }
 }
-
-@media only screen and (max-width: 767px) {
-  nav > .search-form {
-    position: absolute;
-    top: 3px;
-    right: 25px;
-    margin: 6.5px -20px 0 0;
-  }
-  nav > ul.social-media-button {
-    margin-right: -3px;
-  }
-  nav > .navbar-menu > ul.navTabs {
-    margin: 0 0 0 -18px;
-    padding-left: 17px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1000px) {
-  nav > form.search-form {
-   margin-top: 10px;
-   margin-right: 33px!important
-  }
-  nav > ul.social-media-button {
-   margin-right: -4px;
-   margin-top: -2px!important
-  }
-  button.navbar-toggle {
-    margin-top: -2px;
-  }
- }
- @media only screen and (min-width: 835px) and (max-width: 1000px) {
-  ul.navTabs {
-    width: 100%!important
-  }
-}
 @media only screen and (max-width: 1000px) {
+  nav > form.search-form {
+    margin-right: 35px!important;
+   }
   nav > .search-form > .input-group > input {
     top: 0;
   }
-  nav > .search-form > .input-group > input.btn {
-    margin-top: 6px;
-  }
   nav > .navbar-menu {
-    width: calc(100% + 2px)!important;
-    margin-right: -1px;
-    margin-top: -8px;
+    width: 100%!important;
+    margin-top: -2px;
     padding: 0;
     background-color: #0B3D91;
     box-shadow: none!important;
     transition: none;
   }
+  nav > .navbar-menu > ul.navTabs {
+    min-width: 100%;
+    margin: 0 0 0 -18px;
+    padding-left: 18px;
+  }
   nav > .navbar-menu > ul.navTabs > li {
      /* 100 perc width of links on screens of 1000 px wide */
-    width: 100%;
+    min-width: 100%;
     margin: 0;
     padding: 0;
   }
@@ -114,16 +81,21 @@
   display: none;
   }
   nav > .navbar-menu > ul.navTabs > li > a {
-    padding: 10px;
-    min-width: 100%
+    padding: 9px 9px 5px 9px;
+    /* Not letting the x-overflow to the body */
+    min-width: calc(100% - 18px);
   }
   nav > .navbar-menu > ul.navTabs > li > a:hover {
     background-color: rgba(251, 251, 251, 0.137)!important;
   }
   nav > .navbar-menu > ul.navTabs > li > ul {
-    position: relative;
+    position: relative!important;
+    top: 0;
     padding-top: 10px!important;
     background-color: rgba(251, 251, 251, 0.137)!important;
+  }
+  ul.navTabs > li:last-child > ul {
+    width: 100%;
   }
   nav > .navbar-menu > ul.navTabs > li:hover > ul {
     display: none;
@@ -131,33 +103,30 @@
   nav > .navbar-menu > ul.navTabs > li > ul > li {
     padding-left: 30px;
   }
+  nav > ul.social-media-button {
+    margin-right: -8px!important;
+  }
   nav > .navbar-menu > ul.navTabs > li.toggle-open > ul,
-  nav > .navbar-menu > ul.social-media-button > li.toggle-open > ul {
+  nav > ul.social-media-button > li.toggle-open > ul {
     display: block!important;
   }
-  .glyphicon.glyphicon-chevron-down {
+  .fa.fa-chevron-down {
     display: block;
     color: whitesmoke;
-    float: right
+    float: right;
+    font-size: 20px;
   }
   nav > ul.social-media-button {
     position: absolute;
-    margin-top: -1px;
-    right: 57px
-  }
-  nav > ul.social-media-button > li > ul {
-    top: 56px;
-  }
-  nav > .search-form {
-    margin-right: 76px!important
+    right: 53px
   }
   .navbar-menu {
     display: none;
   }
-   .shown {
+  .shown {
     display: block!important;
   }
-  .navbar-toggle {
+  .navbar-toggler {
     display: block!important;
   }
   /* End of the layout breakpoint */

@@ -1,15 +1,15 @@
- /* navbar hamburger menu button */
+/* navbar hamburger menu button */
 button.navbar-toggler {
-  padding: 29px 0 27px 0;
+  padding: 26px 0;
   float: right;
 }
-button.navbar-toggler[aria-expanded="true"]{
-  background-color: #0B3D91;
+button.navbar-toggler[aria-expanded="true"] {
+  background-color: #0b3d91;
 }
-button.navbar-toggler[aria-expanded="false"]{
+button.navbar-toggler[aria-expanded="false"] {
   background-color: none;
 }
- /* Hamburger menu button icon */
+/* Hamburger menu button icon */
 .navbar-toggler > span.fa-bars {
   color: whitesmoke;
   width: 45px;
